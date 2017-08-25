@@ -4,7 +4,7 @@ app.controller('FirstController', ['$scope', '$firebaseArray',
 	function($scope, $firebaseArray) {
 
 		// Firebase Reference
-		var dataRef = new Firebase('https://angular-firebase-1365b.firebaseio.com/');
+		var dataRef = new Firebase('');
 
 		// Get data as an array
 		$scope.formdata = $firebaseArray(dataRef);
