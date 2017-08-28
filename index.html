@@ -15,6 +15,7 @@
 
   <div class="login-page">
     <form data-ng-submit="saveForm()" name="regForm" class="form register-form" novalidate="">
+      <input type="hidden" name="uniquekey" data-ng-model="uniquekey">
         <div ng-class="{ 'has-error' : regForm.firstname.$invalid && !regForm.firstname.$pristine }">
             <input type="text" name="firstname" data-ng-model="firstname" placeholder="first name" required="">
             <label ng-show="regForm.firstname.$invalid && !regForm.firstname.$pristine">First Name required !</label>
@@ -44,6 +45,7 @@
         <th>Last Name</th>
         <th>Email</th>
         <th>Phone Number</th>
+        <th>Edit</th>
     </tr>
 </thead>
 <tbody>
@@ -52,6 +54,7 @@
     <td>{{ fd.lastname }}</td>
     <td>{{ fd.email }}</td>
     <td>{{ fd.phonenumber }}</td>
+    <td><button class="editbutton" ng-click="editData(fd)">Edit</button></td>
 </tr>
 </tbody>
 </table>
